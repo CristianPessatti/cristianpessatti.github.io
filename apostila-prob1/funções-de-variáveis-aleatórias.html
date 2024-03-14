@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 FUNÇÕES DE VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade</title>
+  <meta name="description" content="A porra toda de prob 1 e 2" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 FUNÇÕES DE VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A porra toda de prob 1 e 2" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 FUNÇÕES DE VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade" />
+  
+  <meta name="twitter:description" content="A porra toda de prob 1 e 2" />
+  
+
+<meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
+
+
+<meta name="date" content="2024-03-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="modelos-de-probabilidade.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html"><i class="fa fa-check"></i><b>2</b> REVISÃO - OPERADORES LÓGICOS</a></li>
+<li class="chapter" data-level="3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html"><i class="fa fa-check"></i><b>3</b> REVISÃO - TEORIA DOS CONJUNTOS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#conjuntos"><i class="fa fa-check"></i><b>3.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#intervalos"><i class="fa fa-check"></i><b>3.2</b> Intervalos</a></li>
+<li class="chapter" data-level="3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#operações-com-conjuntos"><i class="fa fa-check"></i><b>3.3</b> Operações com Conjuntos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#união-ou-conjunção"><i class="fa fa-check"></i><b>3.3.1</b> União (ou Conjunção):</a></li>
+<li class="chapter" data-level="3.3.2" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#interseção-ou-disjunção"><i class="fa fa-check"></i><b>3.3.2</b> Interseção (ou Disjunção):</a></li>
+<li class="chapter" data-level="3.3.3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#complementar-ou-negação"><i class="fa fa-check"></i><b>3.3.3</b> Complementar (ou Negação):</a></li>
+<li class="chapter" data-level="3.3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#leis-de-morgan"><i class="fa fa-check"></i><b>3.3.4</b> Leis de Morgan:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html#exercícios-resolvidos"><i class="fa fa-check"></i><b>3.4</b> Exercícios Resolvidos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html"><i class="fa fa-check"></i><b>4</b> EXPERIMENTOS E EVENTOS PROBABILÍSTICOS</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#experimento-aleatório"><i class="fa fa-check"></i><b>4.1</b> Experimento Aleatório</a></li>
+<li class="chapter" data-level="4.2" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#eventos"><i class="fa fa-check"></i><b>4.2</b> Eventos</a></li>
+<li class="chapter" data-level="4.3" data-path="experimentos-e-eventos-probabilísticos.html"><a href="experimentos-e-eventos-probabilísticos.html#sigma-álgebra"><i class="fa fa-check"></i><b>4.3</b> <span class="math inline">\(\sigma\)</span>-álgebra</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probabilidade.html"><a href="probabilidade.html"><i class="fa fa-check"></i><b>5</b> PROBABILIDADE</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="probabilidade.html"><a href="probabilidade.html#definição-de-uma-probabilidade"><i class="fa fa-check"></i><b>5.1</b> Definição de uma Probabilidade</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="probabilidade.html"><a href="probabilidade.html#definição-clássica-de-probabilidade"><i class="fa fa-check"></i><b>5.1.1</b> Definição Clássica de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.2" data-path="probabilidade.html"><a href="probabilidade.html#definição-geométrica-de-probabilidade"><i class="fa fa-check"></i><b>5.1.2</b> Definição Geométrica de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.3" data-path="probabilidade.html"><a href="probabilidade.html#definição-frequentista-de-probabilidade"><i class="fa fa-check"></i><b>5.1.3</b> Definição Frequentista de Probabilidade</a></li>
+<li class="chapter" data-level="5.1.4" data-path="probabilidade.html"><a href="probabilidade.html#definição-axiomática-de-probabilidade"><i class="fa fa-check"></i><b>5.1.4</b> Definição Axiomática de Probabilidade</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="probabilidade.html"><a href="probabilidade.html#espaço-de-probabilidade"><i class="fa fa-check"></i><b>5.2</b> Espaço de Probabilidade</a></li>
+<li class="chapter" data-level="5.3" data-path="probabilidade.html"><a href="probabilidade.html#propriedades-de-uma-probabilidade"><i class="fa fa-check"></i><b>5.3</b> Propriedades de uma Probabilidade</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html"><i class="fa fa-check"></i><b>6</b> PROBABILIDADE CONDICIONAL</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#definição-de-probabilidade-condicional"><i class="fa fa-check"></i><b>6.1</b> Definição de Probabilidade Condicional</a></li>
+<li class="chapter" data-level="6.2" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-multiplicação"><i class="fa fa-check"></i><b>6.2</b> Teorema da Multiplicação</a></li>
+<li class="chapter" data-level="6.3" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#partição-de-omega"><i class="fa fa-check"></i><b>6.3</b> Partição de Omega</a></li>
+<li class="chapter" data-level="6.4" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-probabilidade-total"><i class="fa fa-check"></i><b>6.4</b> Teorema da Probabilidade Total</a></li>
+<li class="chapter" data-level="6.5" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-de-bayes"><i class="fa fa-check"></i><b>6.5</b> Teorema de Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#definição-de-uma-variável-aleatória"><i class="fa fa-check"></i><b>7.1</b> Definição de uma Variável Aleatória</a></li>
+<li class="chapter" data-level="7.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#função-de-distribuição"><i class="fa fa-check"></i><b>7.2</b> Função de Distribuição</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#propriedades-de-uma-f.d."><i class="fa fa-check"></i><b>7.2.1</b> Propriedades de uma F.D.</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#tipos-de-variáveis-aleatórias"><i class="fa fa-check"></i><b>7.3</b> Tipos de Variáveis Aleatórias</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#discreta"><i class="fa fa-check"></i><b>7.3.1</b> Discreta</a></li>
+<li class="chapter" data-level="7.3.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#contínua"><i class="fa fa-check"></i><b>7.3.2</b> Contínua</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html"><i class="fa fa-check"></i><b>8</b> ESPERANÇA E VARIÂNCIA</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-esperança"><i class="fa fa-check"></i><b>8.1</b> Definição de Esperança</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#variável-discreta"><i class="fa fa-check"></i><b>8.1.1</b> Variável Discreta</a></li>
+<li class="chapter" data-level="8.1.2" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#variável-contínua"><i class="fa fa-check"></i><b>8.1.2</b> Variável Contínua</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#propriedades-de-esperança"><i class="fa fa-check"></i><b>8.2</b> Propriedades de Esperança</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-variância"><i class="fa fa-check"></i><b>8.2.1</b> Definição de Variância</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-geradora-de-momentos"><i class="fa fa-check"></i><b>9.1</b> Definição de Função Geradora de Momentos</a></li>
+<li class="chapter" data-level="9.2" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-característica"><i class="fa fa-check"></i><b>9.2</b> Definição de Função Característica</a></li>
+<li class="chapter" data-level="9.3" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#propriedades-da-função-característica"><i class="fa fa-check"></i><b>9.3</b> Propriedades da Função Característica</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html"><i class="fa fa-check"></i><b>10</b> MODELOS DE PROBABILIDADE</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-discretos"><i class="fa fa-check"></i><b>10.1</b> Modelos Discretos</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-uniforme-discreto"><i class="fa fa-check"></i><b>10.1.1</b> Modelo Uniforme Discreto</a></li>
+<li class="chapter" data-level="10.1.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-bernoulli"><i class="fa fa-check"></i><b>10.1.2</b> Modelo de Bernoulli</a></li>
+<li class="chapter" data-level="10.1.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-binomial"><i class="fa fa-check"></i><b>10.1.3</b> Modelo Binomial</a></li>
+<li class="chapter" data-level="10.1.4" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-geométrico"><i class="fa fa-check"></i><b>10.1.4</b> Modelo Geométrico</a></li>
+<li class="chapter" data-level="10.1.5" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-poisson"><i class="fa fa-check"></i><b>10.1.5</b> Modelo Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-contínuos"><i class="fa fa-check"></i><b>10.2</b> Modelos Contínuos</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-uniforme-contínuo"><i class="fa fa-check"></i><b>10.2.1</b> Modelo Uniforme Contínuo</a></li>
+<li class="chapter" data-level="10.2.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-exponencial"><i class="fa fa-check"></i><b>10.2.2</b> Modelo Exponencial</a></li>
+<li class="chapter" data-level="10.2.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-normal"><i class="fa fa-check"></i><b>10.2.3</b> Modelo Normal</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#esperança-de-função-de-v.as"><i class="fa fa-check"></i><b>11.1</b> Esperança de Função de V.a’s</a></li>
+<li class="chapter" data-level="11.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#distribuição-de-funções-de-v.as"><i class="fa fa-check"></i><b>11.2</b> Distribuição de Funções de V.a’s</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-discreto"><i class="fa fa-check"></i><b>11.2.1</b> Caso discreto</a></li>
+<li class="chapter" data-level="11.2.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-contínuo"><i class="fa fa-check"></i><b>11.2.2</b> Caso contínuo</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#jacobiano"><i class="fa fa-check"></i><b>11.3</b> Jacobiano</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Teoria da Probabilidade</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="funções-de-variáveis-aleatórias" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS<a href="funções-de-variáveis-aleatórias.html#funções-de-variáveis-aleatórias" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="esperança-de-função-de-v.as" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Esperança de Função de V.a’s<a href="funções-de-variáveis-aleatórias.html#esperança-de-função-de-v.as" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>É claro que, dada uma v.a <span class="math inline">\(X\)</span> a função <span class="math inline">\(Y=g(X)\)</span> também será uma v.a desde que g seja uma função apropriada(mensurável).</p>
+<p>Exemplo:<br> Seja <span class="math inline">\(X\)</span> uma v.a tal que <span class="math inline">\(P(X=-1)=P(X=1)=\frac{1}{2}\)</span>.
+Defina a função <span class="math inline">\(Y=X²\)</span>, então <span class="math inline">\(Y=X²\)</span> também será uma v.a no mesmo e.p com f.p dada por <span class="math inline">\(P(Y=1)=1\)</span>, ou seja, <span class="math inline">\(Y\)</span> é massa pontual em 1.
+<br>(notar que: <span class="math inline">\(E(X²)=E(Y)=1\cdot P(Y=1)=1\)</span>)</p>
+<p>Definição: Seja <span class="math inline">\(X\)</span> uma v.a em <span class="math inline">\((\Omega,\mathbb{A},P)\)</span> e seja <span class="math inline">\(Y=g(X)\)</span> uma função mensurável em <span class="math inline">\(\mathbb{R}\)</span>. Então:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;E(Y)=E\left[g(X)\right]=\int g(x)dF(x)=
+\left\{
+\begin{array}{ll}
+\underset{x}{\sum}g(x)P(X=x),&amp;X\text{ discreto}\\
+\overset{+\infty}{\underset{-\infty}{\int}}g(x)f(x)dx,&amp;X\text{ contínua}
+\end{array}
+\right.
+\end{align*}
+\]</span></p>
+<p>Um caso importante de função de v.a é <span class="math inline">\(g(x)=x^k,\;k=1,2,3,...\)</span></p>
+<p>Definição: Seja X uma v.a. O valor <span class="math inline">\(E(X-b)^k\)</span>, se existir, é chamado k-ésimo momento de <span class="math inline">\(X\)</span> em torno de <span class="math inline">\(b\)</span>, para <span class="math inline">\(b\in\mathbb{R},k=1,2,...\)</span></p>
+<p>O k-ésimo momento de <span class="math inline">\(X\)</span> em torno de zero, <span class="math inline">\(E(X^k)\)</span>, é chamdo simplesmente de k-ésimo momento de X ou momento de ordem <span class="math inline">\(k\)</span>.</p>
+<p>O k-ésimo momento de <span class="math inline">\(X\)</span> em torno de sua média,<span class="math inline">\(E(X-E(X))^k\)</span>, é chamado k-ésimo momento central de <span class="math inline">\(X\)</span></p>
+<p>obs:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;1)\text{ O primeiro momento de X é }E(X)\\
+&amp;2)\text{ O primeiro momento central é zero, pois: }\\
+&amp;\quad E(X-E(X))=E(X)-E(E(X))=E(X)-E(X)=0\\
+&amp;3)\text{ O segundo momento central será a variância:}\\
+&amp;\quad\text{Prova: }E(X-E(X))²=E(X²-2XE(X)+[E(X)]²)\\
+&amp;\qquad\qquad =E(X²)-2E(X)E(X)+[E(X)]²\\
+&amp;\qquad\qquad =E(X²)-2[E(X)]²+[E(X)]²\\
+&amp;\qquad\qquad =E(X²)-[E(X)]²=Var(X)
+\end{align*}
+\]</span></p>
+<p>Definição: Define-se o desvio padrão de <span class="math inline">\(X\)</span> como a raiz positiva da variância:<span class="math inline">\(\Large\sigma\normalsize_X=\sqrt{Var(X)}\)</span></p>
+<p>Proposição:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;1)\text{ Se }X=c,\text{ entâo } Var(X)=0\\
+&amp;2)\;Var(X+b)=Var(X)\text{ e }Var(aX+b)=a²Var(X)\\
+&amp;3)\text{ Desigualdade básica. Se X é uma v.a,não negativa então:}\\
+&amp;\quad P(X\ge\lambda)\le\frac{1}{\lambda}E(X),\;\forall\lambda&gt;0\\
+&amp;4)\text{ Desiqualdade clássica de Tchebychev. Se X é integrável, então:}\\
+&amp;\quad P(|X-E(X)|\ge\lambda)\le\frac{Var(X)}{\lambda²},\;\forall\lambda&gt;0\\
+&amp;5)\text{ Desigualdade de Markov. Para qualquer v.a X:}\\
+&amp;\quad P(|X|\ge\lambda)\le\frac{E|X|^t}{\lambda^t},\;\forall\lambda&gt;0,t&gt;0
+\end{align*}
+\]</span></p>
+<p>Proposição: Seja <span class="math inline">\(X\)</span> integrável com <span class="math inline">\(E(X)=\mu\)</span>. Então, <span class="math inline">\(\mu\)</span> é o valor que minimiza <span class="math inline">\(E(X-c)²,\;c\in\mathbb{R}\)</span>.
+<br> Ou seja, <span class="math inline">\(Var(X)=E(X-E(X))²=\underset{c}{\min}E(X-c)²\)</span></p>
+</div>
+<div id="distribuição-de-funções-de-v.as" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Distribuição de Funções de V.a’s<a href="funções-de-variáveis-aleatórias.html#distribuição-de-funções-de-v.as" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dada uma v.a <span class="math inline">\(X\)</span> com distribuição conhecida e dada uma transformação <span class="math inline">\(Y=g(X)\)</span>, sendo <span class="math inline">\(g\)</span> enumerável.
+<br>O objetivo é encontrar a distribuição de <span class="math inline">\(Y\)</span> a partir da distribuição de <span class="math inline">\(X\)</span>.</p>
+<div id="caso-discreto" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Caso discreto<a href="funções-de-variáveis-aleatórias.html#caso-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Seja <span class="math inline">\(X\)</span> v.a discreta em <span class="math inline">\(\{x_1,x_2,...\}\)</span>
+<br>Seja <span class="math inline">\(Y=g(X) \rightarrow Y\in\{g(x_1),g(x_2),...\}\)</span>
+<br>Então:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;P(Y=y)=P(g(x)=y)=P(X=g^{-1}(y))
+\end{align*}
+\]</span></p>
+<p>Exemplo: Seja <span class="math inline">\(X\)</span> com a seguinte distribuição:</p>
+<p><span class="math display">\[
+\begin{array}{l|l|l|l|}
+X&amp;-2&amp;-1&amp;0&amp;2\\
+\hline
+P_X&amp;\frac{1}{8}&amp;\frac{1}{4}&amp;\frac{1}{2}&amp;\frac{1}{8}\\
+\end{array}
+\]</span></p>
+<p>Defina a nova v.a <span class="math inline">\(Y=g(X)=X²\)</span>, vemos que <span class="math inline">\(Y\in\{0,1,4\}\)</span>.</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;P(Y=0)=P(X=0)=\frac{1}{2}\\
+&amp;P(Y=1)=P(X=-1)=\frac{1}{4}\\
+&amp;P(Y=4)=P(X=-2)+P(X=2)=\frac{1}{8}+\frac{1}{8}=\frac{1}{4}
+\end{align*}
+\]</span></p>
+<p>Seja <span class="math inline">\(U=1+\cos(\pi X)\)</span>. <span class="math inline">\(U\in\{0,2\}\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\begin{array}{l|l|l|l|}
+X&amp;-2&amp;-1&amp;0&amp;2\\
+\hline
+P_X&amp;\frac{1}{8}&amp;\frac{1}{4}&amp;\frac{1}{2}&amp;\frac{1}{8}\\
+\hline
+U&amp;2&amp;0&amp;2&amp;2\\
+\hline
+\end{array}\\
+\\
+&amp;P(U=0)=P(X=-1)=\frac{1}{4}\\
+&amp;P(U=2)=1-P(U=0)=\frac{3}{4}
+\end{align*}
+\]</span></p>
+<p>Exemplo: Seja <span class="math inline">\(X\sim Geo(p),\;x=0,1,2,...\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;P(X=x)=p(1-p)^x\quad,x=0,1,2,...
+\end{align*}
+\]</span></p>
+<p>Seja <span class="math inline">\(Y=X+1\rightarrow Y\in\{1,2,3,...\}\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\overset{P_Y(y)}{P(Y=y)}=P(X+1=y)=\overset{P_X(y-1)}{P(X=y-1)}\\
+&amp;\qquad\qquad=p(1-p)^{y-1}\;,\;y=1,2,3,...\\
+&amp;\text{Portanto:}\\
+&amp;\qquad\qquad Y\sim Geo(p)\;,\;y=1,2,3,...
+\end{align*}
+\]</span></p>
+</div>
+<div id="caso-contínuo" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Caso contínuo<a href="funções-de-variáveis-aleatórias.html#caso-contínuo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Exemplo: Seja <span class="math inline">\(X\sim U(0,1)\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;f_X(x)=1,\quad 0&lt;x&lt;1\\
+&amp;F_X(x)=x,\quad 0&lt;x&lt;1
+\end{align*}
+\]</span></p>
+<p>Defina <span class="math inline">\(Y=-\ln{X}\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;F_Y(y)=P(Y\le y)=P(-\ln{X}\le y)=P(\ln{X}\ge -y)=P(X\ge e^{-y})\\
+&amp;=1-P(X\le e^{-y})=1-F_X(e^{-y})=1-e^{-y}\\
+&amp;\text{pois, }0&lt;e^{-y}&lt;1 \text{ se } y&gt;0
+\end{align*}
+\]</span></p>
+<p>Assim, <span class="math inline">\(F_Y(y)=1-e^{-y},\quad y&gt;0.\)</span>
+<br><span class="math inline">\(\rightarrow Y\sim \exp(1)\)</span></p>
+</div>
+</div>
+<div id="jacobiano" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Jacobiano<a href="funções-de-variáveis-aleatórias.html#jacobiano" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Teorema: Seja <span class="math inline">\(X\)</span> uma v.a contínua com densidade <span class="math inline">\(f_X(x)\)</span>. Seja <span class="math inline">\(Y\)</span> a transformação:<span class="math inline">\(Y=g(X)\)</span>,
+com g sendo bijetora sobre alguma região aberta. Então:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;f_Y(y)=f_X(g^{-1}(y))|J(x,y)|
+\end{align*}
+\]</span></p>
+<p>sendo <span class="math inline">\(J(x,y)=\frac{dx}{dy}=\frac{d\left[g^{-1}(y)\right]}{dy}\)</span>, chamado o Jacobiano de transformação.</p>
+<p>Exemplo_1: Se <span class="math inline">\(Y=g(X)\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;F_Y(y)=P(Y\le y)=P(g(X)\le y)=\overset{\text{se }g^{-1}\text{ existe}}{P(X\le g^{-1}(y))}=F_X(g^{-1}(y))\\
+&amp;F_Y(y)=F_X(g^{-1}(y))\\
+&amp;\text{Derivando ambos os membros:}\\
+&amp;f_Y(y)=f_X(g^{-1}(y))\left|\left[g^{-1}(y)\right]&#39;\right|
+\end{align*}
+\]</span></p>
+<p>do exemplo contínuo:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;f_X(x)=1,\quad 0&lt;x&lt;1\qquad\qquad\qquad y=g(x)=-\ln X\rightarrow x=g^{-1}(y)=e^{-y}\\
+&amp;\text{Assim,}\\
+&amp;f_Y(y)=f_X(e^{-y})\left|\left[e^{-y}\right]&#39;\right|=e^{-y},\quad y&gt;0
+\end{align*}
+\]</span></p>
+<p>Exemplo_2: Seja <span class="math inline">\(X\sim N(0,1)\)</span> e seja <span class="math inline">\(Y=X²\)</span>. Encontrar a distribuição de <span class="math inline">\(Y\)</span>.</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;f_X(x)=\frac{1}{\sqrt{2\pi}}{\Large e^{-\frac{x²}{2}},\quad x\in\mathbb{R}}
+\end{align*}
+\]</span></p>
+<p>como <span class="math inline">\(Y=g(X)=X^2\)</span>, então existem duas inversas, dependendo da região.
+<br>Nesse caso, define-se:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;g_1^{-1}(y)=-\sqrt{y}\quad\text{e}\quad g_2^{-1}(y)=\sqrt{y}
+\qquad J_1(x,y)=\frac{-1}{2\sqrt{y}}\quad\text{e}\quad J_2(x,y)=\frac{1}{2\sqrt{y}}\\
+\\
+&amp;f_Y(y)=f_X(g_1^{-1}(y))|J_1|+f_X(g_2^{-1}(y))|J_2|\\
+&amp;=\frac{1}{\sqrt{2\pi}}{\Large e^\frac{{-\left[-\sqrt{y}\right]²}}{2}}\left|\frac{-1}{2\sqrt{y}}\right|+
+\frac{1}{\sqrt{2\pi}}{\Large e^\frac{{-\left[\sqrt{y}\right]²}}{2}}\left|\frac{1}{2\sqrt{y}}\right|=
+2\frac{1}{\sqrt{2\pi}}{\Large e^{\frac{-y}{2}}}\frac{1}{2\sqrt{y}}=\frac{1}{\sqrt{2\pi y}}{\Large e^{\frac{-y}{2}}},\quad y&gt;0\\
+&amp;\text{Assim: }Y\sim{\large\chi}^{2}_{(1)}
+\end{align*}
+\]</span></p>
+<p>Se <span class="math inline">\(X_1,X_2,...,X_n\)</span> são iid <span class="math inline">\(N(0,1)\;\longrightarrow X^{2}_{1}+X^{2}_{2}+...+X^{2}_{n}\sim{\large\chi}^{2}_{(n)}\)</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="modelos-de-probabilidade.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10-func_vas.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

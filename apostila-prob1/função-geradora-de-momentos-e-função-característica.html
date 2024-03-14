@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 PROBABILIDADE | Teoria da Probabilidade</title>
+  <title>Chapter 9 FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA | Teoria da Probabilidade</title>
   <meta name="description" content="A porra toda de prob 1 e 2" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 PROBABILIDADE | Teoria da Probabilidade" />
+  <meta property="og:title" content="Chapter 9 FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA | Teoria da Probabilidade" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A porra toda de prob 1 e 2" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 PROBABILIDADE | Teoria da Probabilidade" />
+  <meta name="twitter:title" content="Chapter 9 FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA | Teoria da Probabilidade" />
   
   <meta name="twitter:description" content="A porra toda de prob 1 e 2" />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
 
 
-<meta name="date" content="2024-02-27" />
+<meta name="date" content="2024-03-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="experimentos-e-eventos-probabilísticos.html"/>
-<link rel="next" href="probabilidade-condicional.html"/>
+<link rel="prev" href="esperança-e-variância.html"/>
+<link rel="next" href="modelos-de-probabilidade.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -117,7 +117,19 @@
 <li class="chapter" data-level="6.4" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-probabilidade-total"><i class="fa fa-check"></i><b>6.4</b> Teorema da Probabilidade Total</a></li>
 <li class="chapter" data-level="6.5" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-de-bayes"><i class="fa fa-check"></i><b>6.5</b> Teorema de Bayes</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#definição-de-uma-variável-aleatória"><i class="fa fa-check"></i><b>7.1</b> Definição de uma Variável Aleatória</a></li>
+<li class="chapter" data-level="7.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#função-de-distribuição"><i class="fa fa-check"></i><b>7.2</b> Função de Distribuição</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#propriedades-de-uma-f.d."><i class="fa fa-check"></i><b>7.2.1</b> Propriedades de uma F.D.</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#tipos-de-variáveis-aleatórias"><i class="fa fa-check"></i><b>7.3</b> Tipos de Variáveis Aleatórias</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#discreta"><i class="fa fa-check"></i><b>7.3.1</b> Discreta</a></li>
+<li class="chapter" data-level="7.3.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#contínua"><i class="fa fa-check"></i><b>7.3.2</b> Contínua</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html"><i class="fa fa-check"></i><b>8</b> ESPERANÇA E VARIÂNCIA</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-esperança"><i class="fa fa-check"></i><b>8.1</b> Definição de Esperança</a>
@@ -130,7 +142,12 @@
 <li class="chapter" data-level="8.2.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-variância"><i class="fa fa-check"></i><b>8.2.1</b> Definição de Variância</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a></li>
+<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-geradora-de-momentos"><i class="fa fa-check"></i><b>9.1</b> Definição de Função Geradora de Momentos</a></li>
+<li class="chapter" data-level="9.2" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-característica"><i class="fa fa-check"></i><b>9.2</b> Definição de Função Característica</a></li>
+<li class="chapter" data-level="9.3" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#propriedades-da-função-característica"><i class="fa fa-check"></i><b>9.3</b> Propriedades da Função Característica</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html"><i class="fa fa-check"></i><b>10</b> MODELOS DE PROBABILIDADE</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-discretos"><i class="fa fa-check"></i><b>10.1</b> Modelos Discretos</a>
@@ -139,11 +156,25 @@
 <li class="chapter" data-level="10.1.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-bernoulli"><i class="fa fa-check"></i><b>10.1.2</b> Modelo de Bernoulli</a></li>
 <li class="chapter" data-level="10.1.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-binomial"><i class="fa fa-check"></i><b>10.1.3</b> Modelo Binomial</a></li>
 <li class="chapter" data-level="10.1.4" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-geométrico"><i class="fa fa-check"></i><b>10.1.4</b> Modelo Geométrico</a></li>
-<li class="chapter" data-level="10.1.5" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-poisson"><i class="fa fa-check"></i><b>10.1.5</b> Modelo de Poisson</a></li>
+<li class="chapter" data-level="10.1.5" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-poisson"><i class="fa fa-check"></i><b>10.1.5</b> Modelo Poisson</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-contínuos"><i class="fa fa-check"></i><b>10.2</b> Modelos Contínuos</a></li>
+<li class="chapter" data-level="10.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-contínuos"><i class="fa fa-check"></i><b>10.2</b> Modelos Contínuos</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-uniforme-contínuo"><i class="fa fa-check"></i><b>10.2.1</b> Modelo Uniforme Contínuo</a></li>
+<li class="chapter" data-level="10.2.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-exponencial"><i class="fa fa-check"></i><b>10.2.2</b> Modelo Exponencial</a></li>
+<li class="chapter" data-level="10.2.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-normal"><i class="fa fa-check"></i><b>10.2.3</b> Modelo Normal</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#esperança-de-função-de-v.as"><i class="fa fa-check"></i><b>11.1</b> Esperança de Função de V.a’s</a></li>
+<li class="chapter" data-level="11.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#distribuição-de-funções-de-v.as"><i class="fa fa-check"></i><b>11.2</b> Distribuição de Funções de V.a’s</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-discreto"><i class="fa fa-check"></i><b>11.2.1</b> Caso discreto</a></li>
+<li class="chapter" data-level="11.2.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-contínuo"><i class="fa fa-check"></i><b>11.2.2</b> Caso contínuo</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#jacobiano"><i class="fa fa-check"></i><b>11.3</b> Jacobiano</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -165,96 +196,141 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probabilidade" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> PROBABILIDADE<a href="probabilidade.html#probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="definição-de-uma-probabilidade" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Definição de uma Probabilidade<a href="probabilidade.html#definição-de-uma-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Existem varias formas de definir uma medida de probabilidade.</p>
-<div id="definição-clássica-de-probabilidade" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Definição Clássica de Probabilidade<a href="probabilidade.html#definição-clássica-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Suponha que <span class="math inline">\(\Omega\)</span> é finito e os pontos amostrais são equiprováveis.
-Então define-se:
-<span class="math display">\[
-\begin{align*}
-&amp;P(A) = \frac{\#(A)}{\#(\Omega)}
-\end{align*}
-\]</span>
-Exemplo: para <span class="math inline">\(\varepsilon_1\)</span>, <span class="math inline">\(\Omega = \{1,2,3,4,5,6\}\)</span>, <span class="math inline">\(A = \{2,4,6\}\)</span>, <span class="math inline">\(B = \{2\}\)</span>, <span class="math inline">\(C = \{4,5,6\}\)</span></p>
+<div id="função-geradora-de-momentos-e-função-característica" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA<a href="função-geradora-de-momentos-e-função-característica.html#função-geradora-de-momentos-e-função-característica" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="definição-de-função-geradora-de-momentos" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Definição de Função Geradora de Momentos<a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-geradora-de-momentos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definição: Seja <span class="math inline">\(X\)</span> uma v.a integrável. Define-se a Função Geradoras de momentos de <span class="math inline">\(X\)</span> (FGM) como:</p>
 <p><span class="math display">\[
 \begin{align*}
-&amp;P(A) = \frac{\#(A)}{\#(\Omega)} = \frac{3}{6} = \frac{1}{2} \\
-&amp;P(B) = \frac{\#(B)}{\#(\Omega)} = \frac{1}{6} \\
-&amp;P(C) = \frac{\#(C)}{\#(\Omega)} = \frac{3}{6} = \frac{1}{2}
+&amp;M_x(t) = E(e^{tx}) =
+\left\{
+\begin{array}{ll}
+\underset{x}{\sum}e^{tx}P(X=x),&amp;X\text{ discreto}\\
+\overset{+\infty}{\underset{-\infty}{\int}}e^{tx}f(x)dx,&amp;X\text{ contínua}
+\end{array}
+\right.\\
+&amp;\text{sendo t um parâmetro real}
+\end{align*}
+\]</span></p>
+<p>Exemplo Discreto: Seja <span class="math inline">\(X\)</span> tal que <span class="math inline">\(P(X=-1)=P(X=1)=\frac{1}{2}\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_x(t) = \underset{x\epsilon\{-1,1\}}{\sum}e^{tx}P(X=x)=e^{-t}P(X=-1)+e^{t}P(X=1)=\frac{e^{-t}+e^{t}}{2}
+\end{align*}
+\]</span></p>
+<p>Exemplo Contínuo: Seja <span class="math inline">\(X\)</span> uma v.a com densidade <span class="math inline">\(f(x)=e^{-x},\;x\ge0\)</span></p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_x(t)=\overset{+\infty}{\underset{-\infty}{\int}}e^{tx}f(x)dx=\overset{+\infty}{\underset{0}{\int}}e^{tx}e^{-x}dx\\
+&amp;\qquad\;\;=\overset{+\infty}{\underset{0}{\int}}e^{-(1-t)}dx=-\frac{1}{(1-t)}e^{-(1-t)x}\Bigg|_{0}^{+\infty}\frac{1}{1-t}(1-0)\\
+&amp;\qquad\;\;=\frac{1}{1-t},\;t&lt;1
+\end{align*}
+\]</span></p>
+<p>Notar que para FGM de <span class="math inline">\(X\)</span> existir foi necessario restringir os valores de t.
+<br>Uma dificuldade de FGM é que nem sempre ela existe, mesmo numa vizinhaça de zero</p>
+<p>Teorema: Suponha que a FGM de <span class="math inline">\(X\)</span> exista para <span class="math inline">\((t)&lt;t_0.(t_0&gt;0)\)</span>
+<br>Então o k-ésimo momento de <span class="math inline">\(X\)</span> existe e pode set encontrado como:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;E(X^k)=M^{(k)}_X(t)\Bigg|_{t=0} = \frac{\delta^k}{\delta t^k}M_X(t)\Bigg|_{t=0}\quad,\;k=1,2,3,...
+\end{align*}
+\]</span></p>
+<p>Esse resultado justifica o nome da FGM, pois de alguma forma ela gera todos os momentos de <span class="math inline">\(X\)</span></p>
+<p>Exemplo:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_x(t)=\frac{e^{-t}+e^t}{2}\\
+&amp;M&#39;_X(t)=\frac{1}{2}(-e^{-t}+e^t) \rightarrow M&#39;_X(0)=\frac{1}{2}(-e^{-0}+e⁰)=0\\
+&amp;\text{Logo }E(X)=M&#39;_x(0)=0
+\end{align*}
+\]</span></p>
+<p>Também:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M&#39;&#39;_X(t)=\frac{1}{2}(e^{-t}+e^t) \rightarrow M&#39;&#39;_X(0)=\frac{1}{2}(e^{-0}+e^{0})=1=E(X²)\\
+&amp;Var[X]=E[X²]-(E[X])²=1-0=1
+\end{align*}
+\]</span></p>
+<p>Teorema: Se duas v.a’s têm FGM que existam, e são iguais, entao elas têm a mesma distribuição.</p>
+<p>Teorema: Sejam <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> v.a’s independentes. Então:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_{X+Y}(t)=M_X(T)M_Y(t)\\
+&amp;\text{desde que todas as FGM envolvidas existam}
+\end{align*}
+\]</span></p>
+<p>obs:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;1)\text{ Esse resultado serve para encontrar a distribuição da soma de duas v.a&#39;s independentes}\\
+&amp;2)\text{ Esse resultado pode ser estendido para n v.a&#39;s independentes: se }X_1,X_2,...,X_n\text{ são independentes, então:}\\
+&amp;\quad M_{X_1+X_2+...+X_n}(t)=\prod_{i=1}^nM_{X_i}(t)
+\end{align*}
+\]</span></p>
+<p>Teorema: Seja <span class="math inline">\(M_X(t)\)</span> a FGM de <span class="math inline">\(X\)</span>. Defina <span class="math inline">\(Y=ax+b\)</span>. Então:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_Y(t)=M_{ax+b}(t)=e^{bt}M_X(at),\quad a,b\in\mathbb{R}
+\end{align*}
+\]</span></p>
+<p>Prova:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;M_Y(t)=E\left[e^{tY}\right]=E[e^{t(aX+b)}]=E[e^{taX+bt}]=E[e^{bt}e^{atX}]\\
+&amp;=e^{bt}E[e^{atX}]=e^{bt}M_X(at)
 \end{align*}
 \]</span></p>
 </div>
-<div id="definição-geométrica-de-probabilidade" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Definição Geométrica de Probabilidade<a href="probabilidade.html#definição-geométrica-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Seja <span class="math inline">\(\varepsilon_2\)</span>: escolher aleatoriamente um ponto do intervalo (0,1).</p>
+<div id="definição-de-função-característica" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Definição de Função Característica<a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-característica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dadas duas v.a’s reais <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> no mesmo experimento podemos definir uma v.a complexa como:</p>
 <p><span class="math display">\[
 \begin{align*}
-&amp;\Omega = (0,1)
-&amp;P(A) = \frac{comp(A)}{comp(\Omega)}
+&amp;Z=X+iY\\
+&amp;\text{Notar que: }e^{iX}=\cos{X} +i\sin{X}
 \end{align*}
 \]</span></p>
-<p><span class="math inline">\(\varepsilon_3\)</span> escolher um ponto no círculo unitário.</p>
+<p>Definição: Seja <span class="math inline">\(X\)</span> uma v.a real qualquer. Defini-se a Função Característica (FC) de <span class="math inline">\(X\)</span> como:</p>
 <p><span class="math display">\[
 \begin{align*}
-&amp;\Omega = \{(x,y)\;\epsilon\;\mathbb{R}²\;/\;x²+y²\le1\} \quad A = \{(x,y)\;\epsilon\;\mathbb{R}²\;/\;x²+y²\le\frac{1}{4}\} \\
-&amp;P(A) = \frac{área(A)}{área(\Omega)} = \frac{\pi\cdot\frac{1}{4}}{\pi} = \frac{1}{4}
+&amp;\Large\varphi\normalsize_X(t)=E\left[\cos (tX)\right]+iE\left[\sin (tX)\right]
 \end{align*}
 \]</span></p>
-<p>Em geral <span class="math inline">\(P(A) = \frac{volume(A)}{volume(\Omega)}\)</span></p>
-<p>obs: Quando o <span class="math inline">\(\Omega\)</span> é contínuo, a probabilidade de qualquer ponto é 0.</p>
-</div>
-<div id="definição-frequentista-de-probabilidade" class="section level3 hasAnchor" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Definição Frequentista de Probabilidade<a href="probabilidade.html#definição-frequentista-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="math inline">\(\varepsilon\)</span>: Lançar uma moeda, não necessariamente honesta e registramos a ocorrência de cara.</p>
+<p>Notar que, a diferença da FGM, <span class="math inline">\(\Large\varphi\normalsize(t)\in \mathbb{C}\)</span>.
+<br>A grande vantagem da FC sobre a FGM é que a FC, SEMPRE existe.</p>
+<p>Notar também que se a FGM existir então <span class="math inline">\(\Large\varphi\normalsize_X(t)=M_X(it)\)</span></p>
+<p>Para calcular na prática a FC podemos utilizar:</p>
 <p><span class="math display">\[
 \begin{align*}
-&amp;A = \text{ocorrer cara} \\
-&amp;n = \text{número de lançamentos} \\
-&amp;P(A) = \frac{1}{n}\cdot(\text{número de ocorrência de A})
-\end{align*}
-\]</span></p>
-</div>
-<div id="definição-axiomática-de-probabilidade" class="section level3 hasAnchor" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Definição Axiomática de Probabilidade<a href="probabilidade.html#definição-axiomática-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Uma medida de probabilidade é uma função que satisfaz os três axiomas a seguir:</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;A_x1: P(A)\ge 0 \\
-&amp;A_x2:P(\Omega) = 1 \\
-&amp;A_x3:(\sigma\text{-aditividade}):Se\;A_1,A_2,...\text{são disjuntos então,}\;P(\overset{\infty}{\underset{i=1}{\cup}}A_i) = \overset{\infty}{\underset{i=1}{\Sigma}}P(A_i)
+&amp;\Large\varphi\normalsize_X(t)=
+\left\{
+\begin{array}{ll}
+\sum e^{itx}P(X=x),&amp;X\text{ discreto}\\
+\overset{+\infty}{\underset{-\infty}{\int}}e^{itx}f(x)dx,&amp;X\text{ contínuo}
+\end{array}
+\right.
 \end{align*}
 \]</span></p>
 </div>
-</div>
-<div id="espaço-de-probabilidade" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Espaço de Probabilidade<a href="probabilidade.html#espaço-de-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Um espaço de probabilidade é um trio (<span class="math inline">\(\Omega,\mathbb{A},P\)</span>) onde:</p>
+<div id="propriedades-da-função-característica" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Propriedades da Função Característica<a href="função-geradora-de-momentos-e-função-característica.html#propriedades-da-função-característica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 \begin{align*}
-&amp;\Omega\text{ é um conjunto não-vazio} \\
-&amp;\mathbb{A} \text{ é uma } \sigma\text{-álgebra de subconjuntos de }\Omega \\
-&amp;P\text{ é uma probabilidade em }\mathbb{A}
-\end{align*}
-\]</span></p>
-</div>
-<div id="propriedades-de-uma-probabilidade" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Propriedades de uma Probabilidade<a href="probabilidade.html#propriedades-de-uma-probabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[
-\begin{align*}
-&amp;P_1:\;P(A^c) = 1-P(A) \\
-&amp;P_2:\;0\le P(A)\le 1 \\
-&amp;P_3:\;P(B)=P(B\cap A)+P(B\cap A^c) \\
-&amp;P_4:\;\text{Se } A \subset B \rightarrow P(A)\le P(B) \\
-&amp;P_5:\;P(\overset{n}{\underset{i=1}{\cup}}A_i)\le \overset{n}{\underset{i=1}{\Sigma}}P(A_i) \\
-&amp;P_6:\;P(\overset{\infty}{\underset{i=1}{\cup}}A_i)\le \overset{\infty}{\underset{i=1}{\Sigma}}P(A_i) \\
-&amp;P_7:\;\text{(Continuidade de probabilidade) Se existe uma}\text{sequência }A_n\text{ tal que }A_n \uparrow A \text{ então }\\
-&amp;P(A_n) \uparrow P(A).\text{Analogamente, se }A_n \downarrow A \text{ entâo } P(A_n) \downarrow P(A)\\ \\
-&amp;P_8:\;P(A\cup B) = P(A) + P(B) - P(A\cap B). \\
-&amp;P(A\cup B\cup C) = P(A) + P(B) + P(C) - P(A\cap B) - P(A\cap C) - P(B\cap C) + P(A\cap B\cap C)
+&amp;FC1:\;\Large\varphi\normalsize_X(0)=1\\
+&amp;FC2:\;|\Large\varphi\normalsize_X(t)|\le1,\;\forall t\in\mathbb{R}\\
+&amp;FC3:\;\Large\varphi\normalsize_X(t)=\Large\varphi\normalsize_X(-t)\\
+&amp;FC4:\;\Large\varphi\normalsize_X\text{ é uniformemente contínua na reta.}\\
+&amp;FC5:\;\text{Se X e Y são v.a&#39;s independentes, então:}\\
+&amp;\qquad\quad\Large\varphi\normalsize_{X+Y}(t)=\Large\varphi\normalsize_X(t)\Large\varphi\normalsize_Y(t)\\
+&amp;FC6:\;\text{A FC de uma v.a X determina a função distribuição de X}\\
+&amp;\qquad\quad\text{Fórmula de Inversão: }
+F(y)-F(x)=\frac{1}{2\pi}\lim_{u\rightarrow\infty}\overset{u}{\underset{-u}{\int}}\frac{e^{-itx}-e^{-ity}}{it}\Large\varphi\normalsize_X(t)\\
+&amp;FC7:\;\text{A v.a X tem distribuição simétrica em torno de zero sse }\Large\varphi\normalsize_X(t)\text{ é real},\;\forall t\\
+&amp;FC8:\;\text{Se } Y=aX+b,\;a,b\in\mathbb{R}\text{ então }\Large\varphi\normalsize_X(t)=e^{itb}\Large\varphi\normalsize_X(at)\\
+&amp;FC9:\;\text{Se }E[|X|^n]&lt;\infty,\text{ então }\Large\varphi\normalsize_X\text{ possui n derivadas contínuas}\\
+&amp;\qquad\quad E[X^k]=\frac{1}{i^k}\Large\varphi\normalsize_X^{(k)}(0)\\
+&amp;\qquad\quad\text{(ou seja, a FC, também é uma espécie de geradora de momentos)}
 \end{align*}
 \]</span></p>
 
@@ -265,8 +341,8 @@ Exemplo: para <span class="math inline">\(\varepsilon_1\)</span>, <span class="m
           </div>
         </div>
       </div>
-<a href="experimentos-e-eventos-probabilísticos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="probabilidade-condicional.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="esperança-e-variância.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modelos-de-probabilidade.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -297,7 +373,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-probabilidades.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-fgm_fc.Rmd",
 "text": "Edit"
 },
 "history": {

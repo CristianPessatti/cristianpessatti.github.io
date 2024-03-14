@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 PROBABILIDADE CONDICIONAL | Teoria da Probabilidade</title>
+  <title>Chapter 7 VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade</title>
   <meta name="description" content="A porra toda de prob 1 e 2" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 PROBABILIDADE CONDICIONAL | Teoria da Probabilidade" />
+  <meta property="og:title" content="Chapter 7 VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A porra toda de prob 1 e 2" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 PROBABILIDADE CONDICIONAL | Teoria da Probabilidade" />
+  <meta name="twitter:title" content="Chapter 7 VARIÁVEIS ALEATÓRIAS | Teoria da Probabilidade" />
   
   <meta name="twitter:description" content="A porra toda de prob 1 e 2" />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
 
 
-<meta name="date" content="2024-02-27" />
+<meta name="date" content="2024-03-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="probabilidade.html"/>
-<link rel="next" href="variáveis-aleatórias.html"/>
+<link rel="prev" href="probabilidade-condicional.html"/>
+<link rel="next" href="esperança-e-variância.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -117,7 +117,19 @@
 <li class="chapter" data-level="6.4" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-da-probabilidade-total"><i class="fa fa-check"></i><b>6.4</b> Teorema da Probabilidade Total</a></li>
 <li class="chapter" data-level="6.5" data-path="probabilidade-condicional.html"><a href="probabilidade-condicional.html#teorema-de-bayes"><i class="fa fa-check"></i><b>6.5</b> Teorema de Bayes</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a></li>
+<li class="chapter" data-level="7" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html"><i class="fa fa-check"></i><b>7</b> VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#definição-de-uma-variável-aleatória"><i class="fa fa-check"></i><b>7.1</b> Definição de uma Variável Aleatória</a></li>
+<li class="chapter" data-level="7.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#função-de-distribuição"><i class="fa fa-check"></i><b>7.2</b> Função de Distribuição</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#propriedades-de-uma-f.d."><i class="fa fa-check"></i><b>7.2.1</b> Propriedades de uma F.D.</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#tipos-de-variáveis-aleatórias"><i class="fa fa-check"></i><b>7.3</b> Tipos de Variáveis Aleatórias</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#discreta"><i class="fa fa-check"></i><b>7.3.1</b> Discreta</a></li>
+<li class="chapter" data-level="7.3.2" data-path="variáveis-aleatórias.html"><a href="variáveis-aleatórias.html#contínua"><i class="fa fa-check"></i><b>7.3.2</b> Contínua</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html"><i class="fa fa-check"></i><b>8</b> ESPERANÇA E VARIÂNCIA</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-esperança"><i class="fa fa-check"></i><b>8.1</b> Definição de Esperança</a>
@@ -130,7 +142,12 @@
 <li class="chapter" data-level="8.2.1" data-path="esperança-e-variância.html"><a href="esperança-e-variância.html#definição-de-variância"><i class="fa fa-check"></i><b>8.2.1</b> Definição de Variância</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a></li>
+<li class="chapter" data-level="9" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html"><i class="fa fa-check"></i><b>9</b> FUNÇÃO GERADORA DE MOMENTOS E FUNÇÃO CARACTERÍSTICA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-geradora-de-momentos"><i class="fa fa-check"></i><b>9.1</b> Definição de Função Geradora de Momentos</a></li>
+<li class="chapter" data-level="9.2" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#definição-de-função-característica"><i class="fa fa-check"></i><b>9.2</b> Definição de Função Característica</a></li>
+<li class="chapter" data-level="9.3" data-path="função-geradora-de-momentos-e-função-característica.html"><a href="função-geradora-de-momentos-e-função-característica.html#propriedades-da-função-característica"><i class="fa fa-check"></i><b>9.3</b> Propriedades da Função Característica</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html"><i class="fa fa-check"></i><b>10</b> MODELOS DE PROBABILIDADE</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-discretos"><i class="fa fa-check"></i><b>10.1</b> Modelos Discretos</a>
@@ -139,11 +156,25 @@
 <li class="chapter" data-level="10.1.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-bernoulli"><i class="fa fa-check"></i><b>10.1.2</b> Modelo de Bernoulli</a></li>
 <li class="chapter" data-level="10.1.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-binomial"><i class="fa fa-check"></i><b>10.1.3</b> Modelo Binomial</a></li>
 <li class="chapter" data-level="10.1.4" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-geométrico"><i class="fa fa-check"></i><b>10.1.4</b> Modelo Geométrico</a></li>
-<li class="chapter" data-level="10.1.5" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-de-poisson"><i class="fa fa-check"></i><b>10.1.5</b> Modelo de Poisson</a></li>
+<li class="chapter" data-level="10.1.5" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-poisson"><i class="fa fa-check"></i><b>10.1.5</b> Modelo Poisson</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-contínuos"><i class="fa fa-check"></i><b>10.2</b> Modelos Contínuos</a></li>
+<li class="chapter" data-level="10.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelos-contínuos"><i class="fa fa-check"></i><b>10.2</b> Modelos Contínuos</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-uniforme-contínuo"><i class="fa fa-check"></i><b>10.2.1</b> Modelo Uniforme Contínuo</a></li>
+<li class="chapter" data-level="10.2.2" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-exponencial"><i class="fa fa-check"></i><b>10.2.2</b> Modelo Exponencial</a></li>
+<li class="chapter" data-level="10.2.3" data-path="modelos-de-probabilidade.html"><a href="modelos-de-probabilidade.html#modelo-normal"><i class="fa fa-check"></i><b>10.2.3</b> Modelo Normal</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html"><i class="fa fa-check"></i><b>11</b> FUNÇÕES DE VARIÁVEIS ALEATÓRIAS</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#esperança-de-função-de-v.as"><i class="fa fa-check"></i><b>11.1</b> Esperança de Função de V.a’s</a></li>
+<li class="chapter" data-level="11.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#distribuição-de-funções-de-v.as"><i class="fa fa-check"></i><b>11.2</b> Distribuição de Funções de V.a’s</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-discreto"><i class="fa fa-check"></i><b>11.2.1</b> Caso discreto</a></li>
+<li class="chapter" data-level="11.2.2" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#caso-contínuo"><i class="fa fa-check"></i><b>11.2.2</b> Caso contínuo</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="funções-de-variáveis-aleatórias.html"><a href="funções-de-variáveis-aleatórias.html#jacobiano"><i class="fa fa-check"></i><b>11.3</b> Jacobiano</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -165,96 +196,88 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probabilidade-condicional" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> PROBABILIDADE CONDICIONAL<a href="probabilidade-condicional.html#probabilidade-condicional" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="definição-de-probabilidade-condicional" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Definição de Probabilidade Condicional<a href="probabilidade-condicional.html#definição-de-probabilidade-condicional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Lembremos do experimento <span class="math inline">\(\varepsilon_1\)</span>: lançar um dado.
-<span class="math display">\[
-\begin{align*}
-&amp;\Omega = \{1,2,3,4,5,6\} \\
-&amp;\text{Seja A, sair número par } = \{2,4,6\} \text{ e B sair número maior que 3 } =\{4,5,6\} \\
-&amp;\text{Vimos que }P(A) = \frac{\#(A)}{\#(\Omega)} = \frac{1}{2} \\
-&amp;\text{A probabilidade de A, sabendo que ocorreu B, agora será }P(A) = \frac{\#(A\cap B)}{\#(B)} = \frac{2}{3}
-\end{align*}
-\]</span></p>
-<p>Definição: Sejam A e B eventos aleatórios em <span class="math inline">\(\mathbb{A}\)</span>. Define-se a probabilidade condicional de A dado B como <span class="math inline">\(P(A|B)\)</span>.
-<span class="math display">\[
-\begin{align*}
-&amp;P(A|B) = \frac{P(A\cap B)}{P(B)} \text{ se } P(B) &gt; 0
-\end{align*}
-\]</span>
-Se <span class="math inline">\(P(B) = 0, P(A|B) \text{ é arbitrário. Geralmente, nesse caso define-se P(A|B) = P(A)}\)</span>.</p>
-<p>Importante: <span class="math inline">\(P(qualquer coisa|B)\)</span> é realmente uma medida de probabilidade, logo satisfaz todos os axiomas e propriedades de uma probabilidade.</p>
-<p>Exemplos:
-<span class="math display">\[
-\begin{align*}
-&amp;\bullet P(\Omega|B) \overset{def}{=} \frac{P(\Omega\cap B)}{P(B)} = \frac{P(B)}{P(B)} = 1 \\
-&amp;\bullet P((A\cup B)|C) = \frac{P((A\cup B)\cap C)}{P(C)} = \frac{P((A\cap C)\cup (B\cap C))}{P(C)} = \frac{P(A\cap C)}{P(C)} + \frac{P(B\cap C)}{P(C)} \\
-&amp;\bullet P(A|B) = \frac{P(A\cap B)}{P(B)} \text{ , também } P(B|A) =\frac{P(B\cap A)}{P(A)} = \frac{P(A\cap B)}{P(B)} \\
-&amp;\bullet P(A\cap B) = P(A|B)\cdot P(B) = P(B|A)\cdot P(A) \\
-&amp;\bullet P(A\cap B\cap C) = P(C|A\cap B)\cdot P(B|A)\cdot P(A)
-\end{align*}
-\]</span></p>
-</div>
-<div id="teorema-da-multiplicação" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Teorema da Multiplicação<a href="probabilidade-condicional.html#teorema-da-multiplicação" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Os dois últimos resultados do exemplo anterior podem ser generalizados (teorema da multiplicação):</p>
+<div id="variáveis-aleatórias" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> VARIÁVEIS ALEATÓRIAS<a href="variáveis-aleatórias.html#variáveis-aleatórias" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="definição-de-uma-variável-aleatória" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Definição de uma Variável Aleatória<a href="variáveis-aleatórias.html#definição-de-uma-variável-aleatória" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Quando realizamos um experimento aleatório existem algumas características numéricas que são registradas.</p>
+<p>Por exemplo: número de caras em <span class="math inline">\(n\)</span> lançamentos de uma moeda, tempo de vida de um componente, salário, idade, etc. em um questionário sócio econômico.</p>
+<p>Vamos dizer, informalmente, que uma variável aleatória é uma característica numérica de um experimento aleatório.</p>
+<p>Exemplo: Seja <span class="math inline">\(\varepsilon\)</span>: lançar uma moeda honesta três vezes e registrar o resultado.</p>
 <p><span class="math display">\[
 \begin{align*}
-&amp;P(A_1\cap A_2\cap...\cap A_n) = P(A_1)\cdot P(A_2|A_1)...P(A_n|A_1\cap A_2\cap...\cap A_{n-1}) \\
-&amp;\forall A_1,A_2,...,A_n\;\epsilon \mathbb{A},\;n=2,3,...
-\end{align*}
-\]</span></p>
-<p>Exemplo: Selecionar três cartas de um baralho, ao acaso e sem reposição. Qual a probabilidade de tirar 3 reis?</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;\text{Seja }A_i\text{ tirar um rei na i-ésima retirada. }i=(1,2,3) \\
-&amp;P(A_1\cap A_2\cap A_3) = P(A_1)\cdot P(A_2|A_1)\cdot P(A_3|A_1\cap A_2) = \frac{4}{52}\cdot \frac{3}{51}\cdot \frac{2}{50} \approx 0,000181
-\end{align*}
-\]</span></p>
-</div>
-<div id="partição-de-omega" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Partição de Omega<a href="probabilidade-condicional.html#partição-de-omega" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Definição: Sejam <span class="math inline">\(A_1,A_2,...\)</span> subconjuntos de <span class="math inline">\(\Omega\)</span>.
-Diremos que os <span class="math inline">\(A_i\)</span>’s formam uma partição de <span class="math inline">\(\Omega\)</span> se:</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;I)\;A_i\cap A_j = \phi\;, \forall i \neq j \;\text{(disjuntos)} \\
-&amp;II)\;\underset{i}{\cup}A_i = \Omega
-\end{align*}
-\]</span></p>
-</div>
-<div id="teorema-da-probabilidade-total" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Teorema da Probabilidade Total<a href="probabilidade-condicional.html#teorema-da-probabilidade-total" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Seja <span class="math inline">\(A_1,A_2,...\)</span> uma partição de <span class="math inline">\(\Omega\)</span>, então:</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;P(B)=\underset{i}{\Sigma}P(A_i)\cdot P(B|A_i), \forall B \;\epsilon\; \mathbb{A}
-\end{align*}
-\]</span></p>
-</div>
-<div id="teorema-de-bayes" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Teorema de Bayes<a href="probabilidade-condicional.html#teorema-de-bayes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Seja <span class="math inline">\(A_1,A_2,...\)</span> uma partição de <span class="math inline">\(\Omega\)</span>, então:</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;P(A_i|B) = \frac{P(B|A_i)\cdot P(A_i)}{\underset{j}{\Sigma}P(B|A_j)\cdot P(A_j)}\;,\;\forall B\; \epsilon\; \mathbb{A},\; (i\text{ fixo})
-\end{align*}
-\]</span></p>
-<p>Exemplo: Experimento de duas etapas ou composto.</p>
-<p>Suponha que uma caixa contenha três moedas, duas honestas e uma de duas caras. Retirar uma moeda ao acaso e joga-la.Qual a probabilidade da moeda selecionada ter sido a de duas caras, dado que o resultado foi cara?</p>
-<p><span class="math display">\[
-\begin{align*}
-&amp;\text{Vamos definir os eventos:} \\
-&amp;A_1:\text{moeda retirada é honesta} \\
-&amp;A_2:\text{moeda retirada é de duas caras} \\
-&amp;B:\text{resultado é cara} \\
+&amp;\Omega=\{
+  \overset{\omega_1}{(c,c,c)},
+  \overset{\omega_2}{(c,c,\overline c)},
+  \overset{\omega_3}{(c,\overline c,c)},
+  \overset{\omega_4}{(\overline c,c,c)},
+  \overset{\omega_5}{(\overline c,\overline c,c)},
+  \overset{\omega_6}{(\overline c,c,\overline c)},
+  \overset{\omega_7}{(c,\overline c,\overline c)},
+  \overset{\omega_8}{(\overline c,\overline c,\overline c)},
+\}\\
 \\
-&amp;P(A_2|B) = \frac{P(B|A_2)\cdot P(A_2)}{P(B|A_1)\cdot P(A_1)+P(B|A_2)\cdot P(A_2)} = \frac{1\cdot \frac{1}{3}}{\frac{1}{2}\cdot\frac{2}{3}+1\cdot\frac{1}{3}} = \frac{\frac{1}{3}}{\frac{2}{3}} = \frac{1}{2}
+&amp;\mathbb{A}=\mathcal{P}(\Omega)\\
+\\
+&amp;p(\omega_i)=\frac18,\; i=1,...,8\\
 \end{align*}
 \]</span></p>
+<p>Defina a função <span class="math inline">\(X(\omega_1):\)</span> número de caras em <span class="math inline">\(\omega_i\)</span></p>
+<p>Assim: <span class="math inline">\(X(\omega_1)=3,\;X(\omega_2)=2,...,\;X(\omega_8)=0\)</span></p>
+<p>Podemos escrever <span class="math inline">\(X\in\{0,1,2,3\}\)</span></p>
+<p><strong>Definição:</strong> Uma variável aleatória X em um espaço de probabilidade <span class="math inline">\((\Omega,\mathbb A,P)\)</span> é uma função real definida sobre <span class="math inline">\(\Omega\)</span> tal que o evento <span class="math inline">\([X\le x]=\{\omega\in\Omega/X(\omega)\le x,\forall x\in\mathbb R\}\)</span> é um evento aleatório, ou seja <span class="math inline">\([X\le x]\in\mathbb A\)</span></p>
+<p>No exemplo anterior:
+- Seja <span class="math inline">\(x=-1:\;[X\le-1]=\phi\in\mathbb A\)</span>
+- Seja <span class="math inline">\(x&lt;0:\;[X\le-1]=\phi\in\mathbb A\)</span>
+- Seja <span class="math inline">\(x=0:\;[X\le0]=\{\omega_8\}\in\mathbb A\)</span>
+- Seja <span class="math inline">\(x=\pi:\;[X\le\pi]=\Omega\in\mathbb A\)</span>
+- Seja <span class="math inline">\(x=1,83:\;[X\le1,83]=\{\omega_5,\omega_6,\omega_7,\omega_8\}\in\mathbb A\)</span></p>
+</div>
+<div id="função-de-distribuição" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Função de Distribuição<a href="variáveis-aleatórias.html#função-de-distribuição" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A função de distribuição de uma variável aleatória <span class="math inline">\(X\)</span>, representada por <span class="math inline">\(F_X\)</span> (ou apenas <span class="math inline">\(F\)</span> se não houver problemas de interpretação), é definida como:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;F_X(x)=P(X\le x),\;\forall x\in\mathbb R
+\end{align*}
+\]</span></p>
+<p>obs: <span class="math inline">\(F_X\)</span> também é chamada função de distribuição acumulada (FDA)</p>
+<div id="propriedades-de-uma-f.d." class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Propriedades de uma F.D.<a href="variáveis-aleatórias.html#propriedades-de-uma-f.d." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Uma função <span class="math inline">\(F\)</span> será função distribuição de alguma variável aleatória <span class="math inline">\(X\)</span> se:
+1. <span class="math inline">\(F\)</span> é não decrescente, i.e., se <span class="math inline">\(x&lt;y\)</span> então <span class="math inline">\(F(x)\le F(y)\)</span>
+2. <span class="math inline">\(F\)</span> é contínua a direita, i.e., se <span class="math inline">\(X_n\downarrow x\)</span> então <span class="math inline">\(F(x_n)\downarrow F(x)\)</span>
+3. Se <span class="math inline">\(X_n\downarrow-\infty\rightarrow F(x_n)\downarrow0\)</span> e se <span class="math inline">\(X_n\uparrow+\infty\rightarrow F(x_n)\uparrow1\)</span>. Isso é geralmente simbolizado como: <span class="math inline">\(F(-\infty)=0\)</span> e <span class="math inline">\(F(+\infty)=1\)</span></p>
+</div>
+</div>
+<div id="tipos-de-variáveis-aleatórias" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Tipos de Variáveis Aleatórias<a href="variáveis-aleatórias.html#tipos-de-variáveis-aleatórias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="discreta" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Discreta<a href="variáveis-aleatórias.html#discreta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definição:</strong> uma variável aleatória <span class="math inline">\(X\)</span> em <span class="math inline">\((\Omega,\mathbb A,P)\)</span> será chamada <strong>discreta</strong> se ela assume um número finito ou enumerável de valores, i.e., se existe um conjunto finito ou enumerável <span class="math inline">\(\{x_1,x_2,...\}\subset\mathbb R\)</span> (Os valores de uma v.a. discreta não necessariamente serão inteiros) tal que <span class="math inline">\(X(\omega)\in\{x_1,x_2,...\};\;\forall\omega\in\Omega\)</span></p>
+<p>A função <span class="math inline">\(p_X(x_i)=p(x_i)\)</span> definida por <span class="math inline">\(p(x_i)=P(X=x_i),\;i=1,2,...\)</span> é chamada <strong>função de probabilidade de <span class="math inline">\(X\)</span></strong>.</p>
+<p>Para encontrarmos a função distribuição a partir de uma função de probabilidade, podemos fazer o seguinte processo:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;F_X(x)=\sum_{i/x_i\le x}P(X=x_i)=\sum_{i/x_i\le x}p(x_i), \text{ pois }[X\le x_i]=\underset{i/x_i\le x}{\cup}[X=x_i]
+\end{align*}
+\]</span></p>
+</div>
+<div id="contínua" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Contínua<a href="variáveis-aleatórias.html#contínua" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definição:</strong> uma variável aleatória <span class="math inline">\(X\)</span> em <span class="math inline">\((\Omega,\mathbb A,P)\)</span> será chamada <strong>contínua</strong> se existe uma função <span class="math inline">\(f(x)\ge0\)</span> chamada <strong>função densidade</strong> de <span class="math inline">\(X\)</span> tal que:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;F_X(x)=\int_{-\infty}^xf(t)dt,\;\forall x\in\mathbb R
+\end{align*}
+\]</span></p>
+<p><strong>Proposição:</strong> Uma função <span class="math inline">\(f(x)\ge0\)</span> será densidade de alguma variável aleatória <span class="math inline">\(X\)</span> se, e somente se <span class="math inline">\(\int_{-\infty}^{+\infty}f(x)dx=1\)</span>.</p>
+<p>Em suma, para saber se uma variável aleatória possui densidade, podemos utilizar o seguinte critério prático:</p>
+<p><strong><span class="math inline">\(X\)</span> terá densidade se:</strong>
+1. <span class="math inline">\(F_X\)</span> é contínua
+2. <span class="math inline">\(F_X\)</span> é derivável por partes, ou seja, <span class="math inline">\(F_X\)</span> existe no interior de um número finito ou enumerável de intervalos fechados, cuja união é a reta real.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -262,8 +285,8 @@ Diremos que os <span class="math inline">\(A_i\)</span>’s formam uma partiçã
           </div>
         </div>
       </div>
-<a href="probabilidade.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="variáveis-aleatórias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="probabilidade-condicional.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="esperança-e-variância.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -294,7 +317,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-prob_condicional.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-var_aleatorias.Rmd",
 "text": "Edit"
 },
 "history": {
