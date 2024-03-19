@@ -23,7 +23,7 @@
 <meta name="author" content="Bruno Wavrzenczak - Cristian Pessatti dos Anjos - Caio Gomes Alves - Anderson Amorim" />
 
 
-<meta name="date" content="2024-03-14" />
+<meta name="date" content="2024-03-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,12 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
 <li class="chapter" data-level="2" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html"><i class="fa fa-check"></i><b>2</b> REVISÃO - OPERADORES LÓGICOS</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html#noções-de-lógica"><i class="fa fa-check"></i><b>2.1</b> Noções de lógica</a></li>
+<li class="chapter" data-level="2.1" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html#noções-de-lógica"><i class="fa fa-check"></i><b>2.1</b> Noções de lógica</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html#proposição"><i class="fa fa-check"></i><b>2.1.1</b> Proposição</a></li>
+<li class="chapter" data-level="2.1.2" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html#linguagem"><i class="fa fa-check"></i><b>2.1.2</b> Linguagem</a></li>
+<li class="chapter" data-level="2.1.3" data-path="revisão---operadores-lógicos.html"><a href="revisão---operadores-lógicos.html#equivalências"><i class="fa fa-check"></i><b>2.1.3</b> Equivalências</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="revisão---teoria-dos-conjuntos.html"><a href="revisão---teoria-dos-conjuntos.html"><i class="fa fa-check"></i><b>3</b> REVISÃO - TEORIA DOS CONJUNTOS</a>
 <ul>
@@ -203,15 +208,54 @@
 <h1><span class="header-section-number">Chapter 2</span> REVISÃO - OPERADORES LÓGICOS<a href="revisão---operadores-lógicos.html#revisão---operadores-lógicos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="noções-de-lógica" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Noções de lógica<a href="revisão---operadores-lógicos.html#noções-de-lógica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="proposição" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Proposição<a href="revisão---operadores-lógicos.html#proposição" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Uma proposição é uma sentença declarativa que pode ser classficada com um valor lógico de V ou F, seguindo os seguintes princípios:</p>
 <ul>
 <li><p>Príncipio da Não-Contradição:</p>
-<p>Uma proposição não ser falsa e verdadeira oa mesmo tempo.</p></li>
+<p>Uma proposição não pode ser falsa e verdadeira ao mesmo tempo.</p></li>
 <li><p>Princípio do Terceiro Excluído:</p>
 <p>Uma proposição só pode assumir o valor (V) de verdadeiro ou o valor (F) de falso, não havendo a possibilidade de assumir valores diferentes</p></li>
 </ul>
+</div>
+<div id="linguagem" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Linguagem<a href="revisão---operadores-lógicos.html#linguagem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Chamamos de alfabeto de uma linguagem o conjunto de símbolos que a compôem. O alfabeto da lógica proposicional é constituída pelos seguintes símbolos:</p>
+<ul>
+<li>Proposições são representadas por letras maiúsculas: (A, B, …)</li>
+<li>O símbolo de negação é representado por <span class="math inline">\(\neg\)</span></li>
+<li>Conectivos lógicos são representados por <span class="math inline">\(\land\)</span>, <span class="math inline">\(\lor\)</span>, <span class="math inline">\(\implies\)</span>, e <span class="math inline">\(\iff\)</span>, significando, respectivamente, “e”, “ou”, “implica”, “equivale”.</li>
+</ul>
+<p>Expressamos a seguinte proposição “se chove, então a calçada molha.” usando os símbolos lógicos:</p>
+<p><span class="math display">\[P \implies Q\]</span>
+onde P = “chove” e Q = “calçada molha”.</p>
+<p>Os conectivos obedecem as regras do cálculo proposicional:</p>
+<p><span class="math display">\[\begin{array}{|c c|c|c|c|c|}
+p &amp; q &amp; p \land q &amp; p \lor q &amp; p \implies q &amp; p \iff q\\
+\hline
+V &amp; V &amp; V &amp; V &amp; V &amp; V\\
+V &amp; F &amp; F &amp; V &amp; F &amp; F\\
+F &amp; V &amp; F &amp; V &amp; V &amp; F\\
+F &amp; F &amp; F &amp; F &amp; V &amp; V\\
+\end{array}\]</span></p>
+<p>No exemplo dado acima, a proposição acima só é falsa quando P é verdadeira, e Q é falsa, ou seja, choveu e a calçada não está molhada.</p>
+<p>Ex.: “Otávio é bombeiro e advogado”</p>
+<p>Sendo P = “Ótavio é bombeiro” e Q = “Otávio é advogado”, a proposição
+<span class="math display">\[P \land Q\]</span>
+só será verdadeira apenas se Otávio for bombeiro e também advogado.</p>
+</div>
+<div id="equivalências" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Equivalências<a href="revisão---operadores-lógicos.html#equivalências" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align*}
+&amp; i)\ \neg \neg A\ = A\\
+&amp; ii)\ \neg(P \land Q) = (\neg P \lor \neg Q)\\
+&amp; iii)\ \neg(P \lor Q) = (\neg P \land \neg Q)\\
+&amp; iv)\ (P \implies Q) = (\neg P \lor Q)
+\end{align*}\]</span></p>
+<p>as equivalências ii) e iii) tem um paralelo direto com teoria dos conjuntos e as leis de De morgan.</p>
 <p>EM PROGRESSO</p>
 
+</div>
 </div>
 </div>
             </section>
